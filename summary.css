@@ -1,0 +1,234 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+/* Container for menu and summary */
+.menu-container, .summary-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Menu category styling */
+.menu-category {
+    margin-bottom: 20px;
+}
+
+.menu-category h2 {
+    color: #555;
+    font-size: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* List styling */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.menu-item {
+    flex-grow: 1;
+    padding-left: 15px;
+}
+
+/* Image styling */
+.menu-list img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+}
+
+/* Item details */
+.item-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.item-price {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.item-description {
+    font-size: 13px;
+    color: #888;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+/* Counter styling */
+.item-counter {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.item-counter button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.item-counter button:hover {
+    background-color: #0056b3;
+}
+
+.item-counter .item-count {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Submit Order button */
+#submit-order {
+    width: 100%;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+#submit-order:hover {
+    background-color: #218838;
+}
+
+/* Confirmation message */
+.confirmation-message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Order Summary styling */
+.summary-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-item {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-item p {
+    margin: 5px 0;
+    color: #333;
+}
+
+#total-amount {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* General container styling */
+.summary-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Order item styling */
+.order-item {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-item p {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Total amount styling */
+#total-amount {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Confirmation container */
+.confirmation-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #eaf4ea;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.confirmation-container p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Play Game button */
+.play-game-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.play-game-btn:hover {
+    background-color: #0056b3;
+}

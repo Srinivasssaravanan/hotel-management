@@ -1,0 +1,76 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Quiz container */
+.quiz-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+/* Quiz question */
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+.quiz-question h2 {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Option styling */
+label {
+    display: block;
+    margin: 8px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Submit button */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Result message */
+.result-message {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result with Payment</title>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .result-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .result-container p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        #qrcode {
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        #qrcode img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Quiz Result</h1>
+        <div id="result-message"></div>
+        <div id="discount-message"></div>
+        <div id="final-amount"></div>
+        
+        <!-- Static Payment QR code Image -->
+        <div id="qrcode"></div> <!-- Placeholder for QR code -->
+        <p>Scan this QR code to pay via Google Pay</p>
+    </div>
+
+    <script>
+        // Retrieve the score and total amount from localStorage
+        const score = localStorage.getItem('correctAnswers');
+        const totalAmount = parseFloat(localStorage.getItem('totalAmount')) || 100;  // Default to 100 if not set
+
+        const resultMessageDiv = document.getElementById('result-message');
+        const discountMessageDiv = document.getElementById('discount-message');
+        const finalAmountDiv = document.getElementById('final-amount');
+        const qrcodeDiv = document.getElementById('qrcode');
+
+  
+        let discount = 0;
+
+        if (score == 3) {
+            discount = 0.15; 
+        } else if (score == 2) {
+            discount = 0.10; 
+        } else if (score == 1) {
+            discount = 0.05; // 
+        }
+
+  
+        const discountAmount = totalAmount * discount;
+        const finalAmount = totalAmount - discountAmount;
+
+        // Display result and discount information
+        resultMessageDiv.innerHTML = `You got ${score} out of 3 correct!`;
+        discountMessageDiv.innerHTML = `You get a ${discount * 100}% discount!`;
+
+        // Show the final amount after discount
+        finalAmountDiv.innerHTML = `Your final amount after discount is: ₹${finalAmount.toFixed(2)}`;
+
+        // Create a UPI payment link with your UPI ID
+        const upiPaymentLink = `upi://pay?pa=srinivass.s102004@okaxis&pn=Your%20Business&am=${finalAmount.toFixed(2)}&cu=INR`;
+
+        // Generate the QR code for the UPI payment link
+        const qrcode = new QRCode(qrcodeDiv, {
+            text: upiPaymentLink,
+            width: 256,  // Increased size for better visibility
+            height: 256, // Increased size for better visibility
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f3e6;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .confirmation-message {
+            background-color: #fff8e1;
+            border: 1px solid #e0a96d;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+        .confirmation-message h1 {
+            margin: 0;
+            color: #d84315;
+            font-size: 28px;
+        }
+        .confirmation-message p {
+            margin: 15px 0;
+            color: #6d4c41;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .play-button {
+            background-color: #42d815;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .play-button:hover {
+            background-color: #27bf0c;
+        }
+        .decorative-line {
+            width: 80%;
+            height: 2px;
+            background-color: #e0a96d;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-message">
+        <h1>Your Order is Confirmed!</h1>
+        <div class="decorative-line"></div>
+        <p>Thank you for choosing us! While we prepare your meal, why not play a quick food quiz and earn some rewards?</p>
+        <a href="foodquiz.html" class="play-button">Play Now</a>
+    </div>
+</body>
+</html>

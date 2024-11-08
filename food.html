@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #ffffff;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background-color: #ffd700;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        .main-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 10%;
+            background-color: #ffffff;
+        }
+
+        .text-content {
+            max-width: 50%;
+        }
+
+        .text-content h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .text-content p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .sign-btn {
+            padding: 10px 20px;
+            background-color: #ffd700;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .food-img {
+            max-width: 400px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="#" onclick="preventNavigation(event)">Home</a>
+            <a href="#" onclick="preventNavigation(event)">About</a>
+            <a href="#" onclick="preventNavigation(event)">Service</a>
+            <a href="#" onclick="preventNavigation(event)">Menu</a>
+            <a href="#" onclick="preventNavigation(event)">Pages</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="main-section">
+        <div class="text-content">
+            <h2>Enjoy Our Delicious Food</h2>
+            <p>"Rain or shine, it's a fine time to dine. The dining table is where hearts connect and memories are made over shared meals. It's a place where food nourishes the body, and conversation nourishes the soul"</p>
+            <a href="sign.html" class="sign-btn">PLACE YOUR ORDER</a>
+        </div>
+        <img src="veg.avif" alt="Food Dish" class="food-img">
+    </section>
+
+    <script>
+        // Function to prevent navigation on non-order links
+        function preventNavigation(event) {
+            event.preventDefault();
+            alert("Only the 'PLACE YOUR ORDER' button can navigate to a different page.");
+        }
+    </script>
+</body>
+</html>
